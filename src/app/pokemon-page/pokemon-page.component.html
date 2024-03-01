@@ -1,0 +1,71 @@
+<div [style.background-color]="pokemon.types[0].color" class="pokemon-background">
+  <!-- Conteneur principal des détails du Pokémon -->
+  <div class="pokemon-details-container">
+    <!-- Image du Pokémon -->
+    <img [src]="pokemon.image" alt="Pokemon Image" class="pokemon-image">
+    <!-- Nom du Pokémon -->
+    <p class="pokemon-name">{{ pokemon.name }}</p>
+    <!-- Bouton pour le premier type -->
+    <button class="type-button-name" [style.background-color]="pokemon.types[0].color">{{ pokemon.types[0].name }}</button>
+    <!-- Bouton pour le deuxième type s'il existe -->
+    <button *ngIf="pokemon.types[1]" class="type-button">{{pokemon.types[1].name}}</button>
+    <!-- Description du Pokémon -->
+    <p class="pokemon-description">{{pokemon.description}}</p>
+    <!-- Liens pour les différentes sections -->
+    <div class="links-container" [style.color]="pokemon.types[0].color">
+      <!-- Bouton pour afficher les statistiques -->
+      <button class="link-stats" (click)="showStats()"
+        [ngStyle]="{'background-color': showStatsSection ? pokemon.types[0].color : '#FAFAFA',
+                    'color': showStatsSection ? '#FFFFFF' : pokemon.types[0].color}">STATS</button>
+      <!-- Bouton pour afficher les évolutions -->
+      <button class="link-evolutions" (click)="showEvolutions()"
+        [ngStyle]="{'background-color': showEvolutionsSection ? pokemon.types[0].color : '#FAFAFA',
+                    'color': showEvolutionsSection ? '#FFFFFF' : pokemon.types[0].color}">EVOLUTIONS</button>
+      <!-- Bouton pour afficher les mouvements -->
+      <button class="link-moves" (click)="showMoves()"
+        [ngStyle]="{'background-color': showMovesSection ? pokemon.types[0].color : '#FAFAFA',
+                    'color': showMovesSection ? '#FFFFFF' : pokemon.types[0].color}">MOVES</button>
+    </div>
+    <!-- Section des statistiques -->
+    <div *ngIf="showStatsSection" class="stats-section">
+      <div *ngFor="let stat of pokemon.stats" class="stat-item" [style.color]="pokemon.types[0].color">
+        <!-- Nom de la statistique -->
+        <span class="stat-name">{{ stat.name | statFormat }}</span>
+        <!-- Valeur de la statistique -->
+        <span class="triplezero"> 000</span>
+        <!-- Barre de progression représentant la statistique -->
+        <div class="progress-wrapper">
+          <div class="progress-bar" [ngStyle]="{'width': stat.value + '%', 'background-color': pokemon.types[0].color}">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Section des évolutions -->
+      <!-- Flèche entre les évolutions -->
+<!-- Cette partie du code affiche une flèche entre les évolutions du Pokémon. -->
+<!-- Nous utilisons *ngIf pour vérifier s'il y a une prochaine évolution à afficher. -->
+<!-- La couleur de la flèche est définie en fonction du premier type du Pokémon. -->
+<!-- Nous utilisons ngStyle pour définir la position horizontale et la couleur de la flèche de manière dynamique. -->
+    <div *ngIf="showEvolutionsSection" class="evolutions-section">
+      <div *ngFor="let evolution of pokemon.evolutions; let i = index">
+        <!-- Image de l'évolution -->
+        <img *ngIf="evolution.image" [src]="evolution.image" class="evolution-img" [style.left.px]="360 + i * 250" />
+        <!-- Flèche entre les évolutions -->
+        <div *ngIf="pokemon.evolutions[i + 1]" class="arrow" [style.background-color]="pokemon.types[0].color"
+          [ngStyle]="{ 'left.px': 500 + i * 250, '--arrow-color': pokemon.types[0].color }"></div>
+        <!-- Nom de l'évolution -->
+        <div *ngIf="evolution.name" class="evolution-name" [style.left.px]="380 + i * 250">{{evolution.name | uppercase}}</div>
+      </div>
+    </div>
+    <!-- Section des mouvements -->
+    <div *ngIf="showMovesSection" class="moves-section">
+      <div *ngFor="let move of pokemon.moves.slice(0, 3)">
+        <!-- Nom du mouvement -->
+        <span class="move-name">{{ move.name }}</span>
+        <!-- Niveau du mouvement -->
+        <div class="move-level">level&nbsp;{{move.level}}</div>
+        <hr>
+      </div>
+    </div>
+  </div>
+</div>

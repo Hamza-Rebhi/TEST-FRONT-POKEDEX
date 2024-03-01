@@ -1,0 +1,93 @@
+.page-background {
+    width: 1440px;
+    height: 1024px;
+    background-image: url('src/assets/puckatchou.png');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .back-arrow {
+    content: '<';
+    width: 39px;
+    height: 67px;
+    top: 77px;
+    left: 122px;
+    border-radius: 5px; /* Pour arrondir les coins */
+    position: absolute;
+    border-top: black;
+    border-left-color: black;
+    border-right-color: black;
+  }
+  
+
+  
+  
+  
+  .form-container {
+    width: 427.71px;
+    height: 362px;
+    top: 331px;
+    left: 506px;
+    background-color: #FFFFFF;
+    border: 2px solid #595854;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .pikachu-image {
+    width: 94.22px;
+    height: 92.98px;
+    margin-top: 35px; /* Adjust based on actual layout */
+  }
+  
+  .text-description {
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 16px;
+    color: #767676;
+    margin-top: 18px;
+  }
+
+  .pokemon-input {
+    width: 304.97px;
+    height: 59.51px;
+    top: 508.28px;
+    left: 567.99px;
+    border-radius: 5px;
+    border: 1px solid #CFC7C2;
+    
+  }
+  
+  .buttons-container {
+    display: flex;
+    justify-content: space-between;
+     width: 73%; 
+    padding: 0 60px;
+    margin-top: 18px;
+  } 
+  
+  .search-button {
+    width: 116.53px;
+    height: 44.63px;
+    top:602.5px;
+    left: 567.99px;
+    border-radius: 5px;
+    background-color:#FE5858;
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+  }
+  .random-button{
+    width: 116.53px;
+    height: 44.63px;
+    top:602.5px;
+    left:756.42px;
+    border-radius: 5px;
+    background-color:#FE5858;
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+  }

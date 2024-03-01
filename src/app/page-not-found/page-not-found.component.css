@@ -1,0 +1,32 @@
+/* not-found.component.css */
+.not-found-container {
+    width: 1440px;
+    height: 1024px;
+    top:-513px;
+    left:7894px;
+    background-color: #FE5858;
+  }
+  
+  .not-found-title {
+    font-family:Abel;
+    font-weight: 400;
+    font-size: 75px;
+    line-height: 93.75px;
+    color: #FFFFFF;
+    width: 534px;
+    height: 94px;
+    position: absolute;
+    top: 126px;
+    left: 453px;
+    position:absolute;
+    width: 100%;
+  }
+  
+  .not-found-image {
+    width: 360px;
+    height: 470px;
+    position: absolute;
+    top: 277px;
+    left: 540px;
+  }
+  

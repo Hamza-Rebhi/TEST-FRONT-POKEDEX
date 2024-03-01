@@ -1,0 +1,335 @@
+
+
+.pokemon-background {
+    width: 1440px;
+    height: 1024px;
+    background-size: cover;
+
+  }
+  .back-arrow {
+    content: '<';
+
+    width: 39px;
+    height: 67px;
+    top: 77px;
+    left: 122px;
+    border-radius: 5px; /* Pour arrondir les coins */
+    position: absolute;
+}
+
+
+
+ 
+
+   
+  .pokemon-details-container {
+    
+    width: 1196px;
+    height: 795px;
+    top: 85px;
+    border-radius: 48px 48px 0 0;
+    top: 50%;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    background-color: #FAFAFA;
+  
+ 
+
+  }
+  .pokemon-image {
+    width: 170px;
+    height: 170px;
+    left: 513px;
+    position: absolute;
+    bottom: calc(100% - 90px); /* Ajustez cette valeur selon vos besoins */
+    transform: translateX(-18%);
+  }
+  .pokemon-description{
+    width:972px;
+    height:46px;
+    top: 328px;;
+    left:112px;
+    position:absolute;
+    font-family:Abel;
+    font-weight:400;
+    size: 18px;
+    line-height:22.94px;
+    align-content: center;
+    text-align: center
+
+  }
+  .all-button{
+    width:401px;
+    height:60px;
+    top:233px;
+    left:402px;
+  }
+  
+  .type-button-name{
+    width:162.25px;
+    height:45px;
+    top:233px;
+    left:402px;
+    position:absolute;
+    font-family: Abel;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22.94px;
+    text-align: center;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 20px;
+
+
+    
+;
+
+   
+  } 
+  .pokemon-name {
+    width: 335px;
+    height: 51px;
+    top: 30px; 
+    left: 513px;
+    transform: translateX(-30%);
+    font-family: Abel;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 50.98px;
+    text-align: center;
+    color: #4F4F4F;
+    position: absolute;
+  }
+
+  .type-button {
+    width:162.25px;
+    height:45px;
+    top:233px;
+    left:626px;
+    position: absolute;
+    font-family: Abel;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22.94px;
+    text-align: center;
+    color: #FFFFFF;
+    background-color: #B563CE;
+    border: none;
+    border-radius: 20px;
+
+  }
+  
+  .link-stats {
+   
+    left:320px;
+    position:absolute;
+    background-color: #FAFAFA;
+    border: none;
+    border-radius: 20px;
+    width: 206.37px;
+    height: 40px;
+}
+.link-evolutions{
+    left: 560px ;
+    position:absolute;
+    border: none;
+    border-radius: 20px;
+    width: 206.37px;
+    height: 40px;
+}
+.link-moves{
+    left: 798px;
+    position:absolute;
+    border: none;
+    border-radius: 20px;
+    width: 206.37px;
+    height: 40px;
+}
+
+  
+  .links-container {
+    font-family: Abel;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22.94px;
+    letter-spacing: -0.08px;
+    text-align: center;
+    width: 99px;
+    height: 23px;
+    top: 426px ;
+    position: absolute;
+    background-color: #FAFAFA;
+    border: none;
+    border-radius: 20px;
+  }
+  
+  /* Add styles for the different sections when clicked */
+
+
+  .stats-section {
+    width: 375px;
+    height: 165px;
+    top:573px;
+    left: 532px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+  }
+
+ 
+  
+
+.progress-wrapper {
+  width: 240px;
+  height: 8px;
+  top:auto;
+  left: 69px;
+  background-color: #F0F0F0; /* Couleur du reste de la barre */
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+.progress-bar {
+  height: 100%;
+  background-color: #000; /* Couleur de la barre de progression */
+  border-radius: 5px;
+  transform-origin: left;
+
+}
+
+.stat-name{
+  width: 30px;
+  height: 15px;
+  font-family: Abel;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15.29px;
+  letter-spacing:-0.07px ;
+  position:absolute;
+}
+
+
+.triplezero{
+width:30px;
+height: 18px;
+left: 31px;
+font-family: Abel;
+font-weight: 400;
+font-size: 14px;
+line-height: 17.84px;
+letter-spacing:-0.08px;
+color: #666666;
+position:absolute;
+
+
+
+}
+
+ /* Ajouter de l'espace entre le nom de la statistique et les "000" */
+
+ 
+  
+  
+  .stat-item{
+    display: flex; /* Make stat-item a flex container */
+    align-items: center; /* Align items vertically */
+    margin-bottom: 10px; /* Add some space between stat items */
+  }
+    
+  /* .evolution {
+    width:647px ;
+    height:172px ;
+    top:518px ;
+    left: 500px;
+    position: absolute;
+
+  } */
+  .evolution-img {
+    width: 107px;
+    height: 107px;
+    top:524px;
+    position:absolute;
+    left: auto;
+
+  }
+  .evolution-name{
+    width: 135px;
+    height: 46px;
+    top:644px ;
+    position:absolute;
+    left: auto;
+    font-family: Abel;
+    font-weight: 400;
+    font-size: 36px;
+    line-height:45.88px;
+    letter-spacing:-0.08px;
+    align-items: center;
+    
+  }
+
+  .arrow {
+    position: absolute;
+    width: 93.04px;
+    height: 2px;
+    top: 575px;
+    left: auto;
+    border-left: 4px  transparent;
+    border-right: 4px transparent;
+    border-top: 4px transparent;
+  }  
+  .arrow::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+    width: 0px;
+    height: 0px;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-left: 10px solid;
+    border-left-color: var(--arrow-color); /* ou la même couleur que la flèche principale */
+  }
+  
+  
+  
+ 
+  
+
+  
+ 
+  
+  
+  .moves-section {
+    top:518px;
+    left:330px ;
+    width: 375px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+  }
+
+.move-name{
+  left:244px ;
+  font-size: 19px;
+  line-height:24.21px;
+  top:auto;
+font-family: 'Abel';
+font-weight: 400;
+color: #4F4F4F;
+}
+.move-level{
+  size: 14px;
+  line-height:19.12px;
+  left:244px ;
+  top:auto;
+font-family: 'Abel';
+font-weight: 400;
+color: #4F4F4F;
+
+}
+
+
+  

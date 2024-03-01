@@ -1,0 +1,16 @@
+
+
+<div class="page-background">
+  
+    <div class="form-container">
+      <img src="assets/Pokeball.png" alt="Pikachu" class="pikachu-image">
+      <div class="text-description">Pokemon Name or Id</div>
+      <input  [(ngModel)]="searchTerm" 
+      placeholder="Rechercher un pokémon" class="pokemon-input" type="text" placeholder="Enter Pokemon Name or ID">
+      <div class="buttons-container">
+        <button class="search-button" (click)="onSearch()">Search</button>
+        <button class="random-button" (click)="onRandom()">Random</button>
+      </div>
+    </div>
+  </div>
+  
